@@ -4,6 +4,11 @@
 export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;4;34m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;4;32m\]Isco\[$(tput sgr0)\]\[\033[38;4;32m\]@ \[\033[30;1;30m\](\[$(tput sgr0)\]\[\033[30;1;30m\]\w\[$(tput sgr0)\]\[\033[30;1;30m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;4;34m\]\n└──┤=>\[\033[0;37m\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
 #export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;4;34m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;4;32m\]Isco\[$(tput sgr0)\]\[\033[38;4;32m\]@ \[\033[38;5;32m\](\[$(tput sgr0)\]\[\033[38;5;32m\]\w\[$(tput sgr0)\]\[\033[38;5;32m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;4;34m\]\n└┤=>\[\033[0;37m\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
 ################################################################################
+#GIT EDIT CONFIG
+alias ge='f(){ git config --global user.email "$@"; unset -f f; }; f'
+alias gn='f(){ git config --global user.name "$@"; unset -f f; }; f'
+#URL : /home/isco/.ssh/id_rsa.pub
+################################################################################
 #Linux
 alias bash='code ~/.bashrc'
 alias reload='source ~/.bashrc'
@@ -25,27 +30,25 @@ alias buil='npm run build'
 #GIT BASIC
 alias st='git status'
 alias add='git add .'
-alias ck='git checkout .'
 alias br='git branch'
-################################################################################
+#GIT CHECKOUT
+alias ck='f(){ git checkout "$@"; unset -f f; }; f'
 #CREATE COMMIT
 alias comm='f(){ git commit -m "$@"; unset -f f; }; f'
 #CREATE PULL
 alias pull='f(){ git pull origin "$@"; unset -f f; }; f'
 #CREATE PUSH
 alias push='f(){ git push origin "$@"; unset -f f; }; f'
-#CHECKOUT RAMA
-alias check='f(){ git checkout "$@"; unset -f f; }; f'
 ################################################################################
 # CREATE RAMA
-alias nbr='f(){ git checkout -b "$@"; unset -f f; }; f'
+alias ckb='f(){ git checkout -b "$@"; unset -f f; }; f'
 ################################################################################
 #DELETE RAMA
 alias del='f(){ git branch -D "$@"; unset -f f; }; f'
 alias delr='f(){ git push origin :"$@"; unset -f f; }; f'
 ################################################################################
-#GIT EDIT CONFIG
-alias ge='f(){ git config --global user.email "$@"; unset -f f; }; f'
-alias gn='f(){ git config --global user.name "$@"; unset -f f; }; f'
-
-#URL : /home/isco/.ssh/id_rsa.pub
+#CREATE Y PUSH TAG
+alias tg='f(){ git tag -a "$@" -m "$@"; git push origin "$@"; unset -f f; }; f'
+#DELETE TAG
+alias tgd='f(){ git push origin --dalete "$@"; unset -f f; }; f'
+################################################################################
