@@ -136,6 +136,7 @@ alias up='sudo apt-get update && sudo apt-get upgrade'
 alias cll='sudo apt clean'
 alias clll='sudo apt-get -s clean'
 alias pur='sudo apt autoremove --purge'
+alias npmcl='sudo npm cache clean -f'
 ################################################################################
 #Path proyects
 alias proyects='cd /mnt/c/Users/iscja/Documents/Proyects'
