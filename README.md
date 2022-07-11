@@ -22,8 +22,8 @@ Config de referencia, se requiere cambiar de rutas
 
 `rm -rf Hola.txt` // elimina
 
-#Config git bash
-Para configurar el alias de GIT
+# Config git bash
+## Para configurar el alias de GIT
 
 PASO 1: Ir hasta atras de la ruta con el comando cd
 PASO 2: entrar a la carpeta cd /
