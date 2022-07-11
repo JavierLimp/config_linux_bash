@@ -25,9 +25,12 @@ Config de referencia, se requiere cambiar de rutas
 # Config git bash
 ## Para configurar el alias de GIT
 
-PASO 1: Ir hasta atras de la ruta con el comando cd
-PASO 2: entrar a la carpeta cd /
-PASO 3: entrar a la carpeta cd etc
+### PASO 1: 
+`Ir hasta atras de la ruta con el comando cd`
 
-PASO 4: ejecutar el comando code bash.bashrc
+### PASO 2: `entrar a la carpeta cd /`
+
+### PASO 3: `entrar a la carpeta cd etc`
+
+### PASO 4: `ejecutar el comando code bash.bashrc`
 
