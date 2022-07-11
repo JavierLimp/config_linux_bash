@@ -28,9 +28,14 @@ Config de referencia, se requiere cambiar de rutas
 ### PASO 1: 
 `Ir hasta atras de la ruta con el comando cd`
 
-### PASO 2: `entrar a la carpeta cd /`
+### PASO 2: 
 
-### PASO 3: `entrar a la carpeta cd etc`
+`entrar a la carpeta cd /`
 
-### PASO 4: `ejecutar el comando code bash.bashrc`
+### PASO 3: 
+
+`entrar a la carpeta cd etc`
+
+### PASO 4: 
+`ejecutar el comando code bash.bashrc`
 
